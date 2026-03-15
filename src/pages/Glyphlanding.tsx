@@ -57,7 +57,7 @@ const GlyphLanding: React.FC<GlyphLandingProps> = ({ onSelectPdf, onSelectImage 
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg,#0088ff,#0044cc)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 16px rgba(0,136,255,0.4)', flexShrink: 0 }}>
-            <span style={{ color: 'white', fontSize: '14px', fontWeight: 700 }}>G</span>
+            <span style={{ color: 'white', fontSize: '14px', fontWeight: 700 }}>SE</span>
           </div>
           <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', color: C.text }}>SAY EDIT</span>
           <span style={{ fontSize: '9px', color: C.dim, letterSpacing: '0.2em' }}>v2.0</span>
@@ -80,7 +80,7 @@ const GlyphLanding: React.FC<GlyphLandingProps> = ({ onSelectPdf, onSelectImage 
             AI-Powered Document & Image Intelligence
           </p>
           <h1 style={{ fontSize: 'clamp(24px, 6vw, 48px)', fontWeight: 700, margin: 0, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-            What are you <span style={{ color: C.blue }}>analyzing</span>?
+            What are you <span style={{ color: C.blue }}>working on</span>?
           </h1>
           <p style={{ margin: '12px 0 0', color: C.dim, fontSize: '12px', letterSpacing: '0.04em' }}>
             Select a file type to route to the correct workspace

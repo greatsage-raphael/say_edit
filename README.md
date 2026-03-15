@@ -35,6 +35,19 @@ Under the hood, both workspaces run a persistent bi-directional **Gemini Live** 
 
 ---
 
+## Technical Architecture
+
+Say Edit operates as a distributed system across two repositories, separating real-time browser interactions from server-side document processing.
+
+- **Frontend ([This Repo](https://github.com/greatsage-raphael/say_edit)):** Owns the Gemini Live API session, real-time PCM audio streaming, image editing pipeline, and all direct user interaction. Calls Gemini image generation directly from the browser.
+- **Backend ([Say Edit Server](https://github.com/greatsage-raphael/say_edit_server)):** Handles PDF ingestion — parsing, sentence-level chunking with bounding boxes, and vector embedding — which is too compute-intensive and long-running for a browser environment. Exposes a `/query` endpoint the frontend calls during live voice sessions to retrieve spatially-grounded document chunks.
+
+### Client–Server Interaction Flow
+
+The frontend manages the entire live experience. When a PDF is uploaded, it dispatches an ingestion request to the backend. The backend parses the document with `pdfjs`, extracts sentence-level chunks with tight bounding boxes, embeds each chunk via `gemini-embedding-001`, and stores them in a Supabase pgvector index. During a voice session, the Gemini Live API calls the `search_document` tool — the frontend hits the backend's `/query` endpoint, retrieves the top-N semantically relevant chunks with their page numbers and bounding boxes, and passes them back to the model. The model then calls `focus_document_section`, and the frontend jumps the PDF viewer to the correct page and renders yellow highlights at the exact sentence coordinates.
+
+Image editing requires no backend — the current image is encoded as base64 in the browser and sent directly to Gemini image generation alongside the edit prompt and hotspot coordinates.
+
 ## Workspaces
 
 ### Document Navigator
