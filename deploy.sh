@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. SET THESE VALUES
-PROJECT_ID="gen-lang-client-0125303344"
+PROJECT_ID="xoxo"
 REGION="us-central1"
 SERVICE_NAME="glyph-client"
 
