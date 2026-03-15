@@ -7,8 +7,8 @@ SERVICE_NAME="glyph-client"
 
 # 2. THE KEYS VITE NEEDS
 # Use the backend URL from your previous successful deploy
-BACKEND_URL="https://glyph-server-229364276486.us-central1.run.app"
-GEMINI_KEY="AIzaSyBdTqSjLf95GK_99UQjzk2PnfrZxUk9ZgA" # Put your real key here
+BACKEND_URL="https://..."
+GEMINI_KEY="AI......" # Put your real key here
 
 echo "Step 1: Building and Deploying Frontend..."
 
