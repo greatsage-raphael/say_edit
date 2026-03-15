@@ -166,8 +166,8 @@ History is stale-closure-safe: the session's async tool callbacks always read th
 | Task | Model | Reason |
 |:-----|:------|:--------|
 | **Live Voice Session** | `gemini-2.5-flash-native-audio-preview` | Native audio modality — no STT pipeline, sub-300ms response latency |
-| **Photo Editing** | `gemini-2.0-flash-exp-image-generation` | Localized instruction-following edits with pixel-coordinate context |
-| **Image Compositing** | `gemini-2.0-flash-exp-image-generation` | Multi-image input for realistic composite scene generation |
+| **Photo Editing** | `gemini-3.1-flash-image-preview` | Localized instruction-following edits with pixel-coordinate context |
+| **Image Compositing** | `gemini-3.1-flash-image-preview` | Multi-image input for realistic composite scene generation |
 
 ---
 
