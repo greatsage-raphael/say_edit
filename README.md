@@ -178,9 +178,6 @@ History is stale-closure-safe: the session's async tool callbacks always read th
 - `GlyphWorkspace.tsx` — The PDF workspace. Owns the voice session lifecycle, document upload/reindex flow, semantic search tooling, and highlight rendering.
 - `Glyphimageworkspace.tsx` — The image workspace. Owns the voice session, hotspot state, edit and compose tool handlers, and the history stack.
 
-### `/src/components`
-- `ComposePanel.tsx` — The Compose Studio UI (embedded in the image workspace). Dual image slots, prompt input, quick-prompt chips, and the generate button.
-- `TranscriptPanel.tsx` — Live scrolling transcript shared across both workspaces. Renders the animated waveform indicator and the active section / hotspot badge.
 
 ### `/src/utils`
 - `audio.ts` — Low-level PCM audio utilities. Base64 decode/encode, `Float32Array` → `Int16Array` conversion, and `AudioBuffer` construction for the Web Audio API.
